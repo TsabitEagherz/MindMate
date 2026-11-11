@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">TEMAN UNTUK JEDA SEJENAK</p>
+  <h1>Hai, kamu tidak harus menghadapi semuanya sekaligus.</h1>
+  <p>MindMate bisa menemanimu mencoba relaksasi, memahami stres kuliah, atau mencari langkah kecil berikutnya.</p>
+</section>
+
+<section class="theme-grid">
+  {% for t in themes %}
+  <a class="theme-card" href="{{ url_for('chat_page', theme_id=t.id) }}" style="--card: {{ t.color }};">
+    <div class="theme-avatar">{{ t.avatar }}</div>
+    <h2>{{ t.name }}</h2>
+    <p>{{ t.description }}</p>
+    <span class="theme-meta">{{ t.intents | length }} topik bantuan &middot; mulai percakapan</span>
+  </a>
+  {% endfor %}
+</section>
+
+<section class="what-to-expect" aria-label="Yang bisa dibantu MindMate">
+  <h2>Di sini kamu bisa</h2>
+  <ul>
+    <li>mencoba latihan grounding dan pernapasan lembut</li>
+    <li>merefleksikan stres kuliah tanpa memberi skor diagnosis</li>
+    <li>mendapat afirmasi dan informasi mencari dukungan profesional</li>
+  </ul>
+  <p>Secara default, pesan tidak disimpan ke database. MindMate adalah proyek edukasi, bukan layanan psikologis atau darurat.</p>
+</section>
+
+<aside class="crisis-note home-crisis" aria-label="Informasi bantuan segera">
+  <div>
+    <strong>Dalam bahaya atau merasa mungkin melukai diri?</strong>
+    <p>Hubungi orang yang kamu percaya sekarang atau pergi ke IGD terdekat. Untuk dukungan awal kesehatan jiwa di Indonesia, telepon 119 ekstensi 8.</p>
+  </div>
+  <a href="https://www.healing119.id/" target="_blank" rel="noopener noreferrer">Healing119 ↗</a>
+</aside>
+{% endblock %}

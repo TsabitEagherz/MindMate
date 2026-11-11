@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Bot Beo{% endblock %}
+
+{% block content %}
+<h1>🦜 Bot Beo</h1>
+<div class="chat">
+  {% for pengirim, teks in percakapan %}
+  <p class="{{ 'user' if pengirim == 'Anda' else 'bot' }}"><b>{{ pengirim }}:</b> {{ teks }}</p>
+  {% else %}
+  <p class="bot"><b>Bot:</b> Halo! Ketik apa saja, saya akan mengulanginya.</p>
+  {% endfor %}
+</div>
+
+<!-- method="post": data dikirim di body request, bukan di URL -->
+<form method="post">
+  <input name="pesan" placeholder="Ketik pesan..." autocomplete="off" required>
+  <button type="submit">Kirim</button>
+</form>
+{% endblock %}

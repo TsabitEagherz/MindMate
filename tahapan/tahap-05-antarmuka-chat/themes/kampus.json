@@ -1,0 +1,183 @@
+{
+  "id": "kampus",
+  "name": "Asisten Akademik Kampus",
+  "bot_name": "SiAkad",
+  "avatar": "🎓",
+  "color": "#1d4ed8",
+  "description": "Menjawab pertanyaan seputar KRS, jadwal kuliah, UKT, perpustakaan, beasiswa, dan wisuda.",
+  "greeting": "Halo! Saya SiAkad, asisten akademik kampus. Tanyakan soal KRS, jadwal kuliah, UKT, perpustakaan, beasiswa, atau wisuda.",
+  "suggestions": [
+    "Kapan pengisian KRS?",
+    "Cara bayar UKT",
+    "Jam buka perpustakaan",
+    "Info beasiswa"
+  ],
+  "fallback": [
+    "Maaf, saya belum memahami pertanyaan itu. Coba tanyakan tentang KRS, jadwal kuliah, UKT, perpustakaan, beasiswa, atau wisuda.",
+    "Pertanyaan tersebut belum ada di basis pengetahuan saya. Silakan hubungi bagian akademik untuk info lebih lanjut."
+  ],
+  "intents": [
+    {
+      "tag": "salam",
+      "patterns": [
+        "halo",
+        "selamat pagi",
+        "selamat siang",
+        "selamat sore",
+        "selamat malam",
+        "assalamualaikum",
+        "permisi"
+      ],
+      "responses": [
+        "Halo! Ada yang bisa SiAkad bantu seputar akademik?",
+        "Hai! Silakan tanyakan informasi akademik yang Anda butuhkan."
+      ]
+    },
+    {
+      "tag": "perpisahan",
+      "patterns": [
+        "dadah",
+        "sampai jumpa",
+        "bye",
+        "selesai",
+        "sudah cukup"
+      ],
+      "responses": [
+        "Sampai jumpa! Semoga kuliahnya lancar.",
+        "Terima kasih sudah menghubungi SiAkad. Sukses selalu!"
+      ]
+    },
+    {
+      "tag": "terima_kasih",
+      "patterns": [
+        "terima kasih",
+        "makasih banyak",
+        "oke terima kasih",
+        "mantap terima kasih"
+      ],
+      "responses": [
+        "Sama-sama! Senang bisa membantu.",
+        "Dengan senang hati. Ada pertanyaan lain?"
+      ]
+    },
+    {
+      "tag": "identitas",
+      "patterns": [
+        "siapa kamu",
+        "kamu siapa",
+        "nama kamu siapa",
+        "kamu bot apa",
+        "kamu bisa apa"
+      ],
+      "responses": [
+        "Saya {nama_bot}, chatbot asisten akademik. Saya bisa menjawab pertanyaan tentang KRS, jadwal, UKT, perpustakaan, beasiswa, dan wisuda."
+      ]
+    },
+    {
+      "tag": "waktu",
+      "patterns": [
+        "jam berapa sekarang",
+        "sekarang jam berapa",
+        "tanggal berapa hari ini",
+        "hari ini tanggal berapa"
+      ],
+      "responses": [
+        "Sekarang pukul {waktu}, tanggal {tanggal}."
+      ]
+    },
+    {
+      "tag": "krs",
+      "patterns": [
+        "krs",
+        "kapan pengisian krs",
+        "cara isi krs",
+        "jadwal krs",
+        "krs online",
+        "kartu rencana studi",
+        "batas pengisian krs"
+      ],
+      "responses": [
+        "Pengisian KRS dilakukan secara daring melalui portal akademik pada minggu sebelum perkuliahan dimulai. Pastikan UKT sudah dibayar dan KRS disetujui dosen pembimbing akademik."
+      ]
+    },
+    {
+      "tag": "jadwal_kuliah",
+      "patterns": [
+        "jadwal kuliah",
+        "lihat jadwal kuliah",
+        "kapan kuliah dimulai",
+        "jadwal perkuliahan semester ini"
+      ],
+      "responses": [
+        "Jadwal kuliah dapat dilihat di portal akademik menu Jadwal setelah KRS disetujui. Perkuliahan biasanya dimulai sepekan setelah masa KRS berakhir."
+      ]
+    },
+    {
+      "tag": "ukt",
+      "patterns": [
+        "ukt",
+        "cara bayar ukt",
+        "pembayaran ukt",
+        "batas bayar ukt",
+        "ukt berapa",
+        "bayar spp",
+        "virtual account ukt"
+      ],
+      "responses": [
+        "UKT dibayar melalui virtual account bank mitra yang tertera di portal keuangan. Simpan bukti bayar; status lunas biasanya diperbarui dalam 1x24 jam."
+      ]
+    },
+    {
+      "tag": "perpustakaan",
+      "patterns": [
+        "jam buka perpustakaan",
+        "perpustakaan buka jam berapa",
+        "pinjam buku",
+        "cara meminjam buku perpustakaan",
+        "denda perpustakaan"
+      ],
+      "responses": [
+        "Perpustakaan buka Senin-Jumat pukul 08.00-16.00. Peminjaman buku menggunakan kartu mahasiswa, maksimal 3 buku selama 7 hari."
+      ]
+    },
+    {
+      "tag": "beasiswa",
+      "patterns": [
+        "info beasiswa",
+        "beasiswa apa saja",
+        "cara daftar beasiswa",
+        "syarat beasiswa",
+        "beasiswa kip kuliah"
+      ],
+      "responses": [
+        "Informasi beasiswa diumumkan di laman kemahasiswaan. Siapkan transkrip nilai, surat keterangan aktif kuliah, dan dokumen pendukung sesuai syarat tiap beasiswa."
+      ]
+    },
+    {
+      "tag": "wisuda",
+      "patterns": [
+        "kapan wisuda",
+        "syarat wisuda",
+        "daftar wisuda",
+        "pendaftaran wisuda",
+        "jadwal wisuda"
+      ],
+      "responses": [
+        "Pendaftaran wisuda dibuka setelah yudisium. Syarat umumnya: lulus semua mata kuliah, bebas pinjaman perpustakaan, dan unggah skripsi ke repositori."
+      ]
+    },
+    {
+      "tag": "kontak",
+      "patterns": [
+        "kontak akademik",
+        "nomor bagian akademik",
+        "email akademik",
+        "alamat kantor akademik",
+        "hubungi admin"
+      ],
+      "responses": [
+        "Silakan datang ke Biro Akademik di gedung rektorat (Senin-Jumat, 08.00-15.00) atau kirim email ke akademik@kampus-contoh.ac.id."
+      ]
+    }
+  ]
+}

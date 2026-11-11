@@ -1,0 +1,71 @@
+{
+  "id": "mindmate",
+  "name": "Edukasi Kesehatan Mental & Relaksasi",
+  "bot_name": "MindMate",
+  "avatar": "🌿",
+  "color": "#52796f",
+  "description": "Teman edukasi untuk latihan relaksasi, refleksi stres kuliah, dan dukungan awal yang hangat.",
+  "greeting": "Halo, aku MindMate 🌿 Terima kasih sudah mampir. Aku bisa menemanimu mencoba latihan relaksasi, membahas stres kuliah, atau memberi afirmasi. Aku bukan psikolog dan tidak dapat mendiagnosis. Apa yang sedang kamu butuhkan?",
+  "suggestions": [
+    "Aku merasa cemas dan panik",
+    "Aku kewalahan dengan tugas kuliah",
+    "Aku ingin refleksi soal stres",
+    "Kirim afirmasi positif"
+  ],
+  "fallback": [
+    "Aku belum punya jawaban khusus untuk pesan itu. Kalau kamu mau, ceritakan bagian yang paling terasa berat, atau pilih latihan menenangkan diri, dukungan untuk stres kuliah, afirmasi, atau bantuan profesional.",
+    "Aku belum yakin menangkap maksudmu. Kamu boleh mencoba menjelaskannya dengan kata lain. Aku bisa mendengarkan, menawarkan latihan relaksasi sederhana, atau membantu mencari dukungan profesional."
+  ],
+  "intents": [
+    {
+      "tag": "salam",
+      "patterns": ["halo", "hai mindmate", "permisi", "selamat pagi", "selamat malam", "aku ingin teman cerita", "boleh ngobrol", "aku mau bicara", "ada yang bisa diajak cerita"],
+      "responses": ["Hai, aku di sini untuk mendengarkan. Kamu boleh mulai dari hal yang terasa paling berat saat ini.", "Halo 🌿 Kamu tidak harus merangkai cerita dengan sempurna. Ceritakan sebisamu, atau pilih latihan singkat yang terasa nyaman."]
+    },
+    {
+      "tag": "teman_bicara",
+      "patterns": ["aku sedih banget hari ini", "aku merasa kesepian", "aku merasa sendirian", "aku ingin cerita", "aku sedang sedih", "sedih", "hari ini terasa berat", "aku lagi tidak baik baik saja", "aku merasa kosong", "aku merasa down", "aku lagi banyak pikiran", "aku capek secara emosional", "aku tidak tahu harus cerita apa", "rasanya semua terasa berat", "aku butuh didengarkan", "aku ingin meluapkan perasaan", "aku mau curhat", "aku sedang galau", "aku merasa kecewa", "aku kesal dan sedih", "aku menangis terus", "aku takut bercerita", "aku hanya ingin didengar", "aku merasa sendirian menghadapi masalah"],
+      "responses": ["Aku turut prihatin hari ini terasa berat. Terima kasih sudah bilang. Kalau kamu mau, ceritakan apa yang paling memenuhi pikiranmu sekarang—aku akan menanggapi dengan empati.", "Perasaanmu layak didengarkan. Kamu tidak harus mencari solusi sekarang. Apa yang kamu harap orang lain pahami tentang keadaanmu saat ini?"]
+    },
+    {
+      "tag": "latihan_pernapasan",
+      "patterns": ["aku merasa cemas dan panik", "cemas", "panik", "bagaimana menenangkan pikiran", "dada terasa sesak karena stres", "ajari latihan pernapasan", "aku butuh grounding", "cara mengatasi kecemasan sekarang", "aku sedang panik", "aku gugup sekali", "aku overthinking", "pikiranku tidak berhenti", "bagaimana melakukan grounding", "ajarkan teknik napas", "aku ingin menenangkan diri", "jantungku berdebar karena cemas", "tolong bantu aku rileks", "aku takut menghadapi sesuatu", "aku cemas berlebihan", "aku gelisah dan tidak tenang", "bagaimana berhenti overthinking", "pikiranku berputar terus", "aku sulit menenangkan diri", "aku merasa tegang", "aku takut tanpa alasan jelas", "bantu aku fokus ke keadaan sekarang", "aku susah tidur karena banyak pikiran", "aku sedang cemas bantu aku tenang", "bantu aku tenang", "aku butuh ditenangkan", "tolong tenangkan pikiranku"],
+      "responses": ["Kalau terasa nyaman, coba bernapas perlahan: tarik napas lembut lewat hidung selama 4 hitungan, lalu embuskan selama 6 hitungan. Ulangi beberapa kali tanpa memaksa atau menahan napas. Jika muncul pusing atau rasa tidak nyaman, berhenti dan bernapas seperti biasa. Kamu juga bisa menyebutkan 5 hal yang terlihat, 4 yang terasa oleh tubuh, 3 yang terdengar, 2 yang tercium, dan 1 yang terasa di lidah. Pilih yang paling nyaman untukmu.", "Mari coba grounding singkat: rasakan telapak kaki menyentuh lantai, lalu sebutkan perlahan 5 benda yang kamu lihat dan 3 suara yang kamu dengar. Tidak perlu melakukannya dengan sempurna. Jika sensasi sesak atau gejala fisik terasa berat atau baru, cari bantuan medis."]
+    },
+    {
+      "tag": "skrining_stres_kuliah",
+      "patterns": ["kuis cek tingkat stres", "stres", "aku sedang stres kuliah", "cara tahu kalau aku kewalahan", "aku burnout atau cuma capek", "tes kesehatan mental sederhana", "aku kewalahan dengan tugas kuliah", "bagaimana mengetahui tingkat stres", "tanda tanda aku sedang stres", "aku ingin mengecek kondisiku", "akhir akhir ini aku mudah lelah", "aku sulit fokus belakangan ini", "apakah ini stres atau kelelahan", "aku ingin refleksi soal stres", "aku merasa terbebani akhir akhir ini", "aku merasa stres terus", "bagaimana cara tahu aku stres", "aku ingin memahami perasaanku", "akhir akhir ini semuanya terasa berat", "aku merasa kewalahan belakangan ini", "apakah stres yang kurasakan normal"],
+      "responses": ["Kita bisa melakukan refleksi singkat, bukan tes atau diagnosis. Pikirkan beberapa hari terakhir: seberapa sering tugas terasa sulit dihadapi, tidur atau istirahatmu terganggu, dan kamu merasa punya waktu untuk pulih? Kamu boleh menilai tiap hal dari 1 (jarang) sampai 5 (hampir selalu), tetapi tidak perlu menjumlahkannya sebagai skor kesehatan. Jika kondisi ini menetap atau mengganggu keseharian, pertimbangkan berbicara dengan konselor kampus atau tenaga profesional.", "Aku tidak bisa menentukan apakah ini burnout. Coba perhatikan energi, tidur, konsentrasi, dan apakah kamu masih mendapat jeda yang cukup. Apa satu hal kecil yang paling mungkin kamu kurangi atau minta bantuannya hari ini?"]
+    },
+    {
+      "tag": "tips_burnout_kuliah",
+      "patterns": ["aku capek dengan tugas dan skripsi", "cara mengatasi burnout kuliah", "stres dikejar deadline dosen", "aku menunda semua tugas", "kuliah membuatku kewalahan", "tips mengatur tugas kuliah", "tugasku menumpuk semua", "aku lelah mengejar deadline", "aku kehilangan semangat kuliah", "skripsi membuatku stres", "aku tidak tahu mulai tugas dari mana", "aku sulit membagi waktu belajar", "bagaimana mengatur waktu kuliah", "aku kelelahan karena kuliah", "aku merasa jenuh belajar", "aku lelah dengan tugas", "aku kesulitan menyelesaikan tugas", "tugas kuliah bikin stres", "aku tidak punya motivasi belajar", "bagaimana membagi tugas besar", "aku terlalu banyak deadline", "aku merasa burnout", "kuliah terasa melelahkan"],
+      "responses": ["Saat tugas terasa menumpuk, coba pilih satu langkah yang bisa selesai dalam 10–15 menit, lalu istirahat sejenak. Tulis tiga hal: yang paling mendesak, yang bisa ditunda, dan siapa yang bisa dimintai bantuan. Jeda, makan, tidur, dan dukungan orang lain juga bagian dari menjaga diri—kamu tidak perlu menyelesaikan semuanya sekaligus.", "Kamu bisa mulai dengan memecah satu tugas menjadi bagian yang sangat kecil, misalnya membuka dokumen atau menulis kerangka. Pilih satu prioritas untuk saat ini dan beri ruang untuk istirahat. Jika rasa lelah dan tertekan terus berlanjut, bicarakan dengan orang tepercaya atau konselor kampus."]
+    },
+    {
+      "tag": "afirmasi_positif",
+      "patterns": ["aku butuh kata kata motivasi", "aku merasa gagal dan tidak berguna", "kirim afirmasi positif", "aku butuh semangat", "katakan sesuatu yang menenangkan", "aku merasa tidak cukup baik", "beri aku kata kata positif", "aku ingin merasa lebih percaya diri", "tolong tenangkan aku dengan kata kata", "aku sedang meragukan diriku", "aku merasa tertinggal dari orang lain", "aku ingin afirmasi hari ini", "aku butuh pengingat bahwa aku mampu", "beri aku afirmasi hari ini", "aku butuh afirmasi hari ini", "aku ingin kata kata penyemangat"],
+      "responses": ["Afirmasi untuk hari ini: ‘Aku boleh beristirahat. Nilai diriku tidak ditentukan oleh seberapa banyak yang kuselesaikan hari ini.’ Ambil bagian yang terasa cocok dan abaikan yang belum terasa pas.", "Kamu tidak harus menyelesaikan semuanya hari ini. Satu langkah kecil tetap berarti, dan meminta dukungan juga merupakan bentuk usaha."]
+    },
+    {
+      "tag": "edukasi_kesehatan_mental",
+      "patterns": ["kesehatan mental", "apa itu kesehatan mental", "apa itu kesehatan jiwa", "cara menjaga kesehatan mental", "bagaimana merawat kesehatan mental", "apa bedanya stres dan cemas", "apa itu depresi", "apa itu burnout", "apa bedanya psikolog dan psikiater", "kapan perlu bantuan psikolog", "kenapa aku mudah cemas", "bagaimana menjaga pikiran tetap sehat"],
+      "responses": ["Kesehatan mental berkaitan dengan kesejahteraan emosi, pikiran, dan kemampuan menjalani kegiatan sehari-hari. Kondisi tiap orang berbeda, dan satu gejala saja tidak cukup untuk menyimpulkan diagnosis. Istirahat, hubungan yang mendukung, dan mencari bantuan saat diperlukan dapat menjadi bagian dari perawatan diri. Jika kesulitan terasa menetap atau mengganggu aktivitas, bicarakan dengan tenaga profesional.", "Stres dan cemas dapat dialami siapa pun, tetapi MindMate tidak bisa menentukan penyebab atau mendiagnosisnya. Kalau kamu ingin, ceritakan situasi yang sedang kamu hadapi; aku bisa membantu dengan informasi umum atau latihan relaksasi sederhana."]
+    },
+    {
+      "tag": "mencari_bantuan",
+      "patterns": ["aku ingin bicara dengan psikolog", "di mana mencari bantuan kesehatan mental", "aku butuh konselor", "bagaimana menghubungi layanan bantuan", "aku ingin bantuan profesional", "cara mencari psikolog", "aku ingin konsultasi kesehatan mental", "apakah ada layanan konseling", "aku perlu bicara dengan tenaga profesional", "bagaimana menghubungi konselor kampus", "aku butuh bantuan untuk masalah emosi", "di mana bisa mendapat konseling", "kontak bantuan kesehatan jiwa"],
+      "responses": ["Mencari bantuan profesional adalah langkah yang wajar. Kamu bisa menghubungi konselor atau unit layanan konseling di kampusmu, puskesmas, atau psikolog/psikiater berlisensi. Untuk dukungan awal kesehatan jiwa dari Kementerian Kesehatan, kunjungi healing119.id atau hubungi 119 ekstensi 8. Ketersediaan layanan dapat berubah; ikuti informasi terbaru di situs resmi."]
+    },
+    {
+      "tag": "kontak_bantuan_darurat",
+      "patterns": ["aku ingin menyakiti diri", "aku ingin mengakhiri hidup", "aku tidak sanggup bertahan", "aku dalam bahaya sekarang", "ingin menyerah dan bunuh diri", "aku takut akan melukai diriku", "aku kepikiran bunuh diri", "aku ingin bunuh diri", "aku ingin melukai diriku sendiri", "aku takut menyakiti diriku", "aku merasa tidak aman sendirian", "aku mungkin akan menyakiti diri", "aku ingin mati saja", "aku tidak ingin hidup lagi", "aku punya rencana menyakiti diri"],
+      "responses": ["Aku ikut prihatin kamu sedang menghadapi ini. Keselamatanmu yang utama: jika bisa, dekati orang tepercaya sekarang dan katakan bahwa kamu perlu ditemani. Jauhkan benda yang bisa melukaimu dan jangan sendirian. Hubungi layanan darurat setempat atau pergi ke IGD terdekat jika ada bahaya langsung. Untuk dukungan awal kesehatan jiwa di Indonesia, hubungi 119 ekstensi 8 atau kunjungi healing119.id. MindMate bukan layanan darurat dan tidak dapat menggantikan bantuan langsung."]
+    },
+    {
+      "tag": "terima_kasih",
+      "patterns": ["terima kasih", "makasih sudah mendengarkan", "terima kasih sudah membantu", "makasih mindmate", "aku merasa sedikit lebih tenang", "terima kasih sudah menemani", "aku merasa lebih lega", "oke makasih", "terima kasih atas sarannya", "makasih sudah merespons"] ,
+      "responses": ["Sama-sama. Terima kasih sudah berbagi. Semoga kamu bisa mengambil jeda yang kamu perlukan.", "Dengan senang hati 🌿 Jaga dirimu dengan lembut, dan hubungi orang tepercaya bila kamu membutuhkan dukungan lebih lanjut."]
+    }
+  ]
+}

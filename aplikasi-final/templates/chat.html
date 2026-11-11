@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Percakapan dengan MindMate{% endblock %}
+{% block color %}{{ theme.color }}{% endblock %}
+
+{% block header_extra %}
+<div class="header-actions">
+  <a class="btn-ghost" href="{{ url_for('index') }}">Beranda</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="chat-shell" aria-labelledby="chat-heading">
+  <div class="chat-header">
+    <div class="avatar" aria-hidden="true">{{ theme.avatar }}</div>
+    <div class="chat-title">
+      <p class="eyebrow">RUANG DUKUNGAN</p>
+      <h1 id="chat-heading">Halo, aku {{ theme.bot_name }}</h1>
+      <p>{{ theme.name }}</p>
+    </div>
+  </div>
+
+  <div class="support-note">
+    <span aria-hidden="true">🔒</span>
+    {% if conversation_logging %}
+    <p>Percakapan disimpan pada database aplikasi ini. Hindari membagikan data pribadi. MindMate memberi dukungan edukatif, bukan diagnosis atau pengganti psikolog.</p>
+    {% else %}
+    <p>Percakapan tidak disimpan ke database. MindMate memberi dukungan edukatif, bukan diagnosis atau pengganti psikolog.</p>
+    {% endif %}
+  </div>
+
+  <div class="crisis-note" role="note">
+    <div>
+      <strong>Butuh bantuan segera?</strong>
+      <p>Hubungi orang yang kamu percaya. Untuk dukungan awal di Indonesia, telepon <strong>119 ekstensi 8</strong>.</p>
+    </div>
+    <a href="https://www.healing119.id/" target="_blank" rel="noopener noreferrer">Healing119 ↗</a>
+  </div>
+
+  <div id="messages" class="messages" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Percakapan dengan MindMate" tabindex="0"></div>
+
+  <div class="suggestions">
+    <p class="suggestion-label">Kamu bisa mulai dari sini</p>
+    <div class="suggestion-list">
+    {% for s in theme.suggestions %}
+    <button type="button" class="chip" aria-label="Kirim: {{ s }}">{{ s }}</button>
+    {% endfor %}
+    </div>
+  </div>
+
+  <form id="chat-form" class="chat-form" autocomplete="off" aria-label="Kirim pesan ke MindMate">
+    <label class="visually-hidden" for="chat-input">Pesanmu</label>
+    <input id="chat-input" type="text" placeholder="Tulis yang terasa nyaman untukmu…" maxlength="500" aria-describedby="input-help" required>
+    <span id="input-help" class="visually-hidden">Maksimal 500 karakter.</span>
+    <button type="submit">Kirim <span aria-hidden="true">↑</span></button>
+  </form>
+  <p class="privacy-footnote">Jika kamu dalam bahaya langsung, datangi IGD terdekat atau minta orang di dekatmu menemani.</p>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  // Data dari server (Jinja2) diteruskan ke JavaScript dengan filter tojson
+  const THEME = {
+    id: {{ theme.id | tojson }},
+    greeting: {{ theme.greeting | tojson }}
+  };
+</script>
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}
